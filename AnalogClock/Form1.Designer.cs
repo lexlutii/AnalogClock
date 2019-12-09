@@ -28,26 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.analogClockTimeZoneControl1 = new AnalogClockControlLibrary.AnalogClockTimeZoneControl();
+            this.analogClockTimeZoneControl2 = new AnalogClockControlLibrary.AnalogClockTimeZoneControl();
             this.SuspendLayout();
             // 
-            // analogClockTimeZoneControl1
+            // analogClockTimeZoneControl2
             // 
-            this.analogClockTimeZoneControl1.Location = new System.Drawing.Point(12, 12);
-            this.analogClockTimeZoneControl1.Name = "analogClockTimeZoneControl1";
-            this.analogClockTimeZoneControl1.Size = new System.Drawing.Size(259, 287);
-            this.analogClockTimeZoneControl1.TabIndex = 0;
+            this.analogClockTimeZoneControl2.Location = new System.Drawing.Point(0, 0);
+            this.analogClockTimeZoneControl2.Name = "analogClockTimeZoneControl2";
+            this.analogClockTimeZoneControl2.Size = new System.Drawing.Size(259, 287);
+            this.analogClockTimeZoneControl2.TabIndex = 0;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(510, 299);
-            this.Controls.Add(this.analogClockTimeZoneControl1);
+            this.ClientSize = new System.Drawing.Size(261, 292);
+            this.Controls.Add(this.analogClockTimeZoneControl2);
             this.Name = "Form1";
-            this.Text = "Form1";
             this.ResumeLayout(false);
 
         }
@@ -57,6 +52,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private AnalogClockControlLibrary.AnalogClockTimeZoneControl analogClockTimeZoneControl1;
+        private AnalogClockControlLibrary.AnalogClockTimeZoneControl analogClockTimeZoneControl2;
     }
 }
 

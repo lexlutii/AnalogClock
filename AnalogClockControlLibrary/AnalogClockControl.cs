@@ -66,6 +66,7 @@ namespace AnalogClock3
         {
             base.OnCreateControl();
             Thread updateThread = new Thread(redrawing);
+            updateThread.IsBackground = true;
             updateThread.Start();
         }
 
