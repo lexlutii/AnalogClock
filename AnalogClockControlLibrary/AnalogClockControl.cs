@@ -5,10 +5,8 @@ using System.Drawing;
 using System.Data;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
-using System.Threading;
 
 namespace AnalogClock3
 {
@@ -33,6 +31,7 @@ namespace AnalogClock3
         public Font textLabelFont;
 
         public TimeZoneInfo timeZone;
+        private Timer _timer;
 
         public AnalogClockControl()
         {
@@ -65,16 +64,14 @@ namespace AnalogClock3
         protected override void OnCreateControl()
         {
             base.OnCreateControl();
-            Thread updateThread = new Thread(redrawing);
-            updateThread.IsBackground = true;
-            updateThread.Start();
+            _timer = new Timer();
+            _timer.Interval = 1000 / 30;
+            _timer.Tick += Invalidate; ;
+            _timer.Start();    
         }
 
-        private void redrawing() {
-            while (true) {
-                Thread.Sleep(1000 / 30);
-                Invalidate();
-            }
+        private void Invalidate(object s, EventArgs e) {
+            Invalidate();
         }
         
         protected override void OnPaint(PaintEventArgs e)
